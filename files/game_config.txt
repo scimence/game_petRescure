@@ -1,0 +1,42 @@
+﻿
+# google支付相关配置
+# -------------------------
+
+#参数
+google_publickey=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA6k2QpT+LhBK8xb8S1zki743NvkDhvsAkW01kqSbGMVWInf+w/yhGoM50iPUh4VoCgdkzqz9tZrd9rOjAHl06uVt2w+jb2/PBlWz7fKWsyvYtE/Rc4VOtotWyWxOdZR9ZwHZ6Q9cnf6vkqO8mgXImq/lfvvA8oR7PEp6YdzL+T2p2C2q7nB97BTgLQge2SjlBpgBT5oCXYpIoZwxMdwfBUOKtZQDAnGs7XcjcUZhG/gE3E0mAj+2Zl69GT6QG93b8h51YlSxFTz8/takcw88uzDeH+t5LB7fnRJqFRI/y/5MBzBSmZMxH587L/O62pnQd0Zn4v1z7Mk/q1Px7ihK9SwIDAQAB
+
+google_productList=1,2,3,4,5,6,7,8,9,10,11,12
+
+
+	public final static int SMS_CRYTAL=1;					//15元
+	public final static int SMS_SHOP_ITEM1=2;				//2元
+	public final static int SMS_SHOP_ITEM2=3;				//5元
+	public final static int SMS_SHOP_ITEM3=4;				//8元
+	public final static int SMS_SHOP_ITEM4=5;				//20元
+	public final static int SMS_SHOP_ITEM5=6;				//30元
+
+	public final static int SMS_COINS=7;				//30元
+
+
+
+UIManager.openForm("GameLevelPause", "levelpause");
+
+AdmobSdk.ShowBannerAd(AppActivity.context, "");		// 显示banner广告
+UIManager.openForm("GameOver","gameover");
+
+gameplay.setPause(true);
+
+ScriptLib.gameplay.setPause(true);
+
+UIManager.openForm("GameOver", "gameover");
+
+
+AdmobSdk.StopBannerAd(AppActivity.instance);		// 运行游戏时，关闭广告
+
+AdmobSdk.ShowInterstitialAd(AppActivity.instance, "");		// 游戏结束时，显示插屏广告
+
+AdmobSdk.ShowInterstitialAd(AppActivity.instance, "");		// 显示插屏广告
+
+UIManager.loading("GameSelect", "gameselect", true,false);
+
+
